@@ -136,7 +136,7 @@ var ChatModule = (function(){
 		dispose: function(){
 			clearTimer(timerCount);
 			clearTimer(timerMessages);
-		}
+		},
 		
 		/**
 		*	Initialize the chat modules
