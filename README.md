@@ -24,6 +24,7 @@ Below you can find all the methods and properties references.
 The methods for this module are the following:
 
 - **initialize(configurationParams)**: initializes the chat module. It takes as argument an object containing all the configuration parameters.
+
 Example:
 ```
 Chat.initialize({
@@ -44,10 +45,12 @@ Chat.initialize({
 ```
 
 - **saveMessage(messageData, endSaving)**: saves the message written. Its arguments are:
+
 | **Argument** | **Description** |
 |--------------|-----------------|
 | **messageData** | An object containing the data of the message to save |
 | **endSaving** | The callback which will be called after the message saving. If not specified it uses the default callback defined in the configuration |
+
 Example:
 ```
 Chat.saveMessage({"my_message": "Hi guys!"}, function(response){
@@ -56,10 +59,12 @@ Chat.saveMessage({"my_message": "Hi guys!"}, function(response){
 ```
 
 - **loadMessages(chatData, endLoading)**: loads all chat messages. It takes the following arguments:
+
 | **Argument** | **Description** |
 |--------------|-----------------|
 | **chatData** | An object containing the data you need to pass to the server |
 | **endLoading** | The callback which will be called after the messages loading. If not specified it uses the default callback defined in the configuration |
+
 Example:
 ```
 Chat.loadMessages({"chat_id": 1}, function(response){
@@ -68,10 +73,12 @@ Chat.loadMessages({"chat_id": 1}, function(response){
 ```
 
 - **countMessages(chatData, endCounting)**: counts the chat messages. It takes the following arguments:
+
 | **Argument** | **Description** |
 |--------------|-----------------|
 | **chatData** | An object containing the data you need to pass to the server |
 | **endCounting** | The callback which will be called after the messages counting. If not specified it uses the default callback defined in the configuration |
+
 Example:
 ```
 Chat.countMessages({"chat_id": 1}, function(response){
@@ -80,18 +87,21 @@ Chat.countMessages({"chat_id": 1}, function(response){
 ```
 
 - **disposeCounting**: clears the timer used for counting messages.
+
 Example:
 ```
 Chat.disposeCounting();
 ```
 
 - **disposeLoading**: clears the timer used for loading messages.
+
 Example:
 ```
 Chat.disposeLoading();
 ```
 
 - **dispose**: clears all the timers.
+
 Example:
 ```
 Chat.dispose();
