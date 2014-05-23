@@ -1,0 +1,86 @@
+body {
+  background: lightblue;
+}
+
+.bubble.received:after, .bubble.received:before {
+  -webkit-transform: skew(0deg,20deg);
+}
+
+.bubble.sent:after, .bubble.sent:before {
+  -webkit-transform: skew(0deg,-20deg);
+}
+
+.bubble:after, .bubble:before {
+  position: absolute;
+  border-style: solid;
+  display: block;
+  width: 0;
+}
+
+.bubble {
+  position: relative;
+  width: auto;
+  height: 120px;
+  padding: 10px;
+  background: #ece;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: #FFFFFF solid 3px;
+  margin: 30px;
+}
+
+
+
+
+.bubble.received 
+{
+  background: #6AC832;
+  margin-right: 100px;
+}
+
+.bubble.received:after 
+{
+content: '';
+border-width: 15px 17px 15px 0;
+border-color: transparent #6AC832;
+z-index: 1;
+left: -17px;
+bottom: 10px;
+}
+
+.bubble.received:before 
+{
+content: '';
+border-width: 17px 19px 17px 0;
+border-color: transparent #FFFFFF;
+z-index: 0;
+left: -22px;
+bottom: 9px;
+}
+
+.bubble.sent 
+{
+  background: lightgray;
+  margin-left: 100px;
+}
+
+.bubble.sent:after 
+{
+content: '';
+border-width: 15px 0 15px 17px;
+border-color: transparent lightgray;
+z-index: 1;
+right: -17px;
+bottom: 10px;
+}
+
+.bubble.sent:before 
+{
+content: '';
+border-width: 17px 0 17px 19px;
+border-color: transparent #FFFFFF;
+z-index: 0;
+right: -22px;
+bottom: 9px;
+}
